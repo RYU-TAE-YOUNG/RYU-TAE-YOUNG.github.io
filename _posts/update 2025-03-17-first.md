@@ -1,5 +1,5 @@
 ---
-layout: single
+layout: post
 title:  "캡스톤 디자인 과제 1.2"
 ---
 
