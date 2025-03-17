@@ -20,7 +20,7 @@ rtl                      : # true, false (default) # turns direction of the page
 title                    : "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "your name"
+name                     : "RYU-TAE-YOUNG"
 description              : "An amazing website."
 url                      : "https://RYU-TAE-YOUNG.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
