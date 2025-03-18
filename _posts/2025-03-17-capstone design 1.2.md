@@ -4,7 +4,6 @@ title: 캡스톤 디자인 14page 과제
 ```
 
 과제 1.1
-
 ```r
 df <- read.csv("two_dice.csv")
 
@@ -65,7 +64,9 @@ barplot(score_counts_6,
         border = "red")
 
 ```
-
+---
+img_path:/_posts/2025 캡스톤 디자인 14page(과제1.1, 그래프1).png
+---
 
 
 
