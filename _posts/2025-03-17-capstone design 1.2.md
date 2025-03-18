@@ -65,7 +65,7 @@ barplot(score_counts_6,
 
 ```
 ---
-img_path:/_posts/2025 캡스톤 디자인 14page(과제1.1, 그래프1).png
+![image](./_posts/2025 캡스톤 디자인 14page(과제1.1, 그래프1).png
 ---
 
 
