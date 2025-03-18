@@ -64,5 +64,5 @@ barplot(score_counts_6,
 ```
 
 ---
-[image](2025 캡스톤 디자인 14page(과제1.1, 그래프1).png)
+[image](./2025 캡스톤 디자인 14page(과제1.1, 그래프1).png)
 ---
