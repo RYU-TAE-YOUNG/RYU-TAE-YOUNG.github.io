@@ -65,7 +65,7 @@ barplot(score_counts_6,
 
 ```
 ---
-[image](https://github.com/RYU-TAE-YOUNG/RYU-TAE-YOUNG.github.io/blob/master/_posts/2025%20%EC%BA%A1%EC%8A%A4%ED%86%A4%20%EB%94%94%EC%9E%90%EC%9D%B8%2014page(%EA%B3%BC%EC%A0%9C1.1%2C%20%EA%B7%B8%EB%9E%98%ED%94%843).png)
+![image](./_posts/2025 캡스톤 디자인 14page(과제1.1, 그래프1).png)
 ---
 
 
