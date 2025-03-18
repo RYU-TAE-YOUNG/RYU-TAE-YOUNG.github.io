@@ -70,6 +70,64 @@ barplot(score_counts_6,
 
 ![image](https://private-user-images.githubusercontent.com/126757930/423794504-0e9f20c9-9002-4c05-817b-4ba98cde6a24.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIyNzMxNzksIm5iZiI6MTc0MjI3Mjg3OSwicGF0aCI6Ii8xMjY3NTc5MzAvNDIzNzk0NTA0LTBlOWYyMGM5LTkwMDItNGMwNS04MTdiLTRiYTk4Y2RlNmEyNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOFQwNDQxMTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzFkZDU3NmU2MGQyYzMzNGI4NWZhNDQzMzRhYzRlYjIwYTdkZjYzODJiNjM1NjlkNDY4MWIyOTEzMDJmZDMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Wk_ZsDCVQAheKNlD_x-RqVJmxqkz1Vz8JundLA5brOY)
 
+# 이론적인 기대 점수 계산
+# 전략 1
+# if (dice1 ≥ 4): 최종 점수 = 10*dice1 + dice2
+# else: 최종 점수 = 10*dice2 + dice1
+
+# dice1 = 1,2,3 ( 조건 미충족 → else 적용)
+
+(1) dice1 = 1인 경우 
+dice2 = 1 → 10*1 + 1 = 11
+dice2 = 2 → 10*2 + 1 = 21
+dice2 = 3 → 10*3 + 1 = 31
+dice2 = 4 → 10*4 + 1 = 41
+dice2 = 5 → 10*5 + 1 = 51
+dice2 = 6 → 10*6 + 1 = 61
+합계:11 + 21 + 31 + 41 + 51 + 61 =216
+
+(2) dice1 = 2일 경우
+점수: 12, 22, 32, 42, 52, 62 → 합계 = 222 
+
+(3) dice1 = 3일 경우:
+점수: 13, 23, 33, 43, 53, 63 → 합계 = 228 
+
+
+
+# dice=1 = 4,5,6( 조건 충족 → if 적용)
+
+(1) dice1 = 4인 경우
+dice2 = 1 → 10*4 + 1 = 41
+dice2 = 2 → 10*4 + 2 = 42
+dice2 = 3 → 10*4 + 3 = 43
+dice2 = 4 → 10*4 + 4 = 44
+dice2 = 5 → 10*4 + 5 = 45
+dice2 = 6 → 10*4 + 6 = 46
+합계: 41 + 42 + 43 + 44 + 45 + 46 = 261 
+
+(2) dice=1 = 5인 경우
+
+dice1 = 5일 경우:
+점수: 51, 52, 53, 54, 55, 56 → 합계 = 321
+
+dice1 = 6일 경우:
+점수: 61, 62, 63, 64, 65, 66 → 합계 = 381
+
+전체 36가지 경우의 총합
+= 216 + 222 + 228 + 261 + 321 + 381 = 1629
+
+
+평균 기대점수
+= 1629/36 = 약 45.25
+
+
+나머지 전략2, 전략3도 비슷하게 하면 
+전략2 평균 기대점수 = 약 44.50
+전략3 평균 기대점수 = 약 42.25
+→  따라서 전략1이 가장 나은 방법임을 알 수 있음
+
+
+
 과제1.2
 ```r
 simulate_game_fixed <- function(d1, d2, d3) {
