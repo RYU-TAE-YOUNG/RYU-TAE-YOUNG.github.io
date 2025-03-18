@@ -71,61 +71,79 @@ barplot(score_counts_6,
 ![image](https://private-user-images.githubusercontent.com/126757930/423794504-0e9f20c9-9002-4c05-817b-4ba98cde6a24.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIyNzMxNzksIm5iZiI6MTc0MjI3Mjg3OSwicGF0aCI6Ii8xMjY3NTc5MzAvNDIzNzk0NTA0LTBlOWYyMGM5LTkwMDItNGMwNS04MTdiLTRiYTk4Y2RlNmEyNC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOFQwNDQxMTlaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT0zNzFkZDU3NmU2MGQyYzMzNGI4NWZhNDQzMzRhYzRlYjIwYTdkZjYzODJiNjM1NjlkNDY4MWIyOTEzMDJmZDMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.Wk_ZsDCVQAheKNlD_x-RqVJmxqkz1Vz8JundLA5brOY)
 
 # 이론적인 기대 점수 계산
-전략 1
-if (dice1 ≥ 4): 최종 점수 = 10*dice1 + dice2
-else: 최종 점수 = 10*dice2 + dice1
 
-dice1 = 1,2,3 ( 조건 미충족 → else 적용)
+이 문서에서는 주사위 두 개를 사용하여 다음과 같은 전략 하에서 최종 두 자리 수의 평균(기댓값)을 계산하는 과정을 설명합니다.
 
-(1) dice1 = 1인 경우 
-dice2 = 1 → 10*1 + 1 = 11
-dice2 = 2 → 10*2 + 1 = 21
-dice2 = 3 → 10*3 + 1 = 31
-dice2 = 4 → 10*4 + 1 = 41
-dice2 = 5 → 10*5 + 1 = 51
-dice2 = 6 → 10*6 + 1 = 61
-합계:11 + 21 + 31 + 41 + 51 + 61 =216
+## 전략 1
 
-(2) dice1 = 2일 경우
-점수: 12, 22, 32, 42, 52, 62 → 합계 = 222 
+**전략 1:**  
+- **조건:**  
+  - if (dice1 ≥ 4): 최종 점수 = 10 × dice1 + dice2  
+  - else: 최종 점수 = 10 × dice2 + dice1  
 
-(3) dice1 = 3일 경우:
-점수: 13, 23, 33, 43, 53, 63 → 합계 = 228 
+### (A) dice1 = 1, 2, 3 (조건 미충족 → else 적용)
 
+1. **dice1 = 1인 경우**  
+   - dice2 = 1 → 10 × 1 + 1 = 11  
+   - dice2 = 2 → 10 × 2 + 1 = 21  
+   - dice2 = 3 → 10 × 3 + 1 = 31  
+   - dice2 = 4 → 10 × 4 + 1 = 41  
+   - dice2 = 5 → 10 × 5 + 1 = 51  
+   - dice2 = 6 → 10 × 6 + 1 = 61  
+   - **합계:** 11 + 21 + 31 + 41 + 51 + 61 = 216
 
+2. **dice1 = 2일 경우**  
+   - 점수: 12, 22, 32, 42, 52, 62  
+   - **합계:** 222
 
-dice=1 = 4,5,6( 조건 충족 → if 적용)
+3. **dice1 = 3일 경우**  
+   - 점수: 13, 23, 33, 43, 53, 63  
+   - **합계:** 228
 
-(1) dice1 = 4인 경우
-dice2 = 1 → 10*4 + 1 = 41
-dice2 = 2 → 10*4 + 2 = 42
-dice2 = 3 → 10*4 + 3 = 43
-dice2 = 4 → 10*4 + 4 = 44
-dice2 = 5 → 10*4 + 5 = 45
-dice2 = 6 → 10*4 + 6 = 46
-합계: 41 + 42 + 43 + 44 + 45 + 46 = 261 
+### (B) dice1 = 4, 5, 6 (조건 충족 → if 적용)
 
-(2) dice=1 = 5인 경우
+1. **dice1 = 4인 경우**  
+   - dice2 = 1 → 10 × 4 + 1 = 41  
+   - dice2 = 2 → 10 × 4 + 2 = 42  
+   - dice2 = 3 → 10 × 4 + 3 = 43  
+   - dice2 = 4 → 10 × 4 + 4 = 44  
+   - dice2 = 5 → 10 × 4 + 5 = 45  
+   - dice2 = 6 → 10 × 4 + 6 = 46  
+   - **합계:** 41 + 42 + 43 + 44 + 45 + 46 = 261
 
-dice1 = 5일 경우:
-점수: 51, 52, 53, 54, 55, 56 → 합계 = 321
+2. **dice1 = 5인 경우**  
+   - 점수: 51, 52, 53, 54, 55, 56  
+   - **합계:** 321
 
-dice1 = 6일 경우:
-점수: 61, 62, 63, 64, 65, 66 → 합계 = 381
+3. **dice1 = 6인 경우**  
+   - 점수: 61, 62, 63, 64, 65, 66  
+   - **합계:** 381
 
-전체 36가지 경우의 총합
-= 216 + 222 + 228 + 261 + 321 + 381 = 1629
+### 전체 경우의 계산
 
+전체 36가지 경우(각 dice1에 대해 6가지 dice2 값)가 주어질 때,  
+전체 36가지 경우의 총합은:
 
-평균 기대점수
-= 1629/36 = 약 45.25
+\[
+216 + 222 + 228 + 261 + 321 + 381 = 1629
+\]
 
+따라서, 전략 1의 **평균 기대 점수**는
 
-나머지 전략2, 전략3도 비슷하게 하면 
-전략2 평균 기대점수 = 약 44.50
-전략3 평균 기대점수 = 약 42.25
-→  따라서 전략1이 가장 나은 방법임을 알 수 있음
+\[
+\frac{1629}{36} \approx 45.25
+\]
 
+## 전략 2 및 전략 3
+
+나머지 전략을 비슷한 방식으로 계산하면,  
+- **전략 2**의 평균 기대 점수는 약 **44.50**,  
+- **전략 3**의 평균 기대 점수는 약 **42.25**가 됩니다.
+
+따라서,  
+**전략 1이 가장 나은 방법임을 알 수 있습니다.**
+
+---
 
 
 과제1.2
