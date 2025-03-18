@@ -62,3 +62,7 @@ barplot(score_counts_6,
         col = "salmon",
         border = "red")
 ```
+
+---
+[image](2025 캡스톤 디자인 14page(과제1.1, 그래프1).png)
+---
