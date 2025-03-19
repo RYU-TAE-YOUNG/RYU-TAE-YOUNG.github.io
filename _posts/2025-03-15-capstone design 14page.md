@@ -110,7 +110,7 @@ average_score_4 <- mean(df$score_4)
 total_score_4
 average_score_4
 ```
-![image][2025 캡스톤 디자인 14page(과제1 1결과)](https://github.com/user-attachments/assets/cc729d69-3434-4ca9-a09a-df580421150f)
+![2025 캡스톤 디자인 14page(과제1 1결과)](https://github.com/user-attachments/assets/cc729d69-3434-4ca9-a09a-df580421150f)
 
 
 
