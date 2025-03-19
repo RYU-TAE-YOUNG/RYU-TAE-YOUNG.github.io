@@ -110,35 +110,8 @@ average_score_4 <- mean(df$score_4)
 total_score_4
 average_score_4
 ```
-![2025 캡스톤 디자인 14page(과제1 1결과)](https://github.com/user-attachments/assets/cc729d69-3434-4ca9-a09a-df580421150f)
-
-
 
 ```r
-# 전략 2: 첫 번째 주사위 값이 5 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
-df$score_5 <- ifelse(df$dice1 >= 5,
-                     10 * df$dice1 + df$dice2,
-                     10 * df$dice2 + df$dice1)
-
-# 전략 3: 첫 번째 주사위 값이 6 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
-df$score_6 <- ifelse(df$dice1 >= 6,
-                     10 * df$dice1 + df$dice2,
-                     10 * df$dice2 + df$dice1)
-
-
-
-# 전략 2: 총점 및 평균 점수 계산
-total_score_5 <- sum(df$score_5)
-average_score_5 <- mean(df$score_5)
-total_score_5
-average_score_5
-
-# 전략 3: 총점 및 평균 점수 계산
-total_score_6 <- sum(df$score_6)
-average_score_6 <- mean(df$score_6)
-total_score_6
-average_score_6
-
 # 전략 1 (4 이상)
 score_counts_4 <- table(df$score_4)
 barplot(score_counts_4,
@@ -147,7 +120,21 @@ barplot(score_counts_4,
         ylab = "빈도",
         col = "skyblue",
         border = "blue")
+```
 
+```r
+# 전략 2: 첫 번째 주사위 값이 5 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
+df$score_5 <- ifelse(df$dice1 >= 5,
+                     10 * df$dice1 + df$dice2,
+                     10 * df$dice2 + df$dice1)
+# 전략 2: 총점 및 평균 점수 계산
+total_score_5 <- sum(df$score_5)
+average_score_5 <- mean(df$score_5)
+total_score_5
+average_score_5
+```
+
+```r
 # 전략 2 (5 이상)
 score_counts_5 <- table(df$score_5)
 barplot(score_counts_5,
@@ -156,6 +143,27 @@ barplot(score_counts_5,
         ylab = "빈도",
         col = "lightgreen",
         border = "green")
+```
+
+```r
+# 전략 3: 첫 번째 주사위 값이 6 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
+df$score_6 <- ifelse(df$dice1 >= 6,
+                     10 * df$dice1 + df$dice2,
+                     10 * df$dice2 + df$dice1)
+
+
+
+
+
+# 전략 3: 총점 및 평균 점수 계산
+total_score_6 <- sum(df$score_6)
+average_score_6 <- mean(df$score_6)
+total_score_6
+average_score_6
+
+
+
+
 
 # 전략 3 (6 이상)
 score_counts_6 <- table(df$score_6)
