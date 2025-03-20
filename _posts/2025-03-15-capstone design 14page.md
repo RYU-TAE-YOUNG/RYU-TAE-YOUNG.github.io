@@ -112,16 +112,6 @@ average_score_4
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과)](https://github.com/user-attachments/assets/8de4f0da-70f7-472e-8dc6-0c6823ca8a3e)
 
-```r
-# 전략 1 (4 이상)
-score_counts_4 <- table(df$score_4)
-barplot(score_counts_4,
-        main = "전략: 첫 번째 주사위 4 이상",
-        xlab = "점수",
-        ylab = "빈도",
-        col = "skyblue",
-        border = "blue")
-```
 
 ```r
 # 전략 2: 첫 번째 주사위 값이 5 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
@@ -136,26 +126,12 @@ average_score_5
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과2)](https://github.com/user-attachments/assets/e8262c6d-ad3b-426b-88bf-6ffa6abe846e)
 
-```r
-# 전략 2 (5 이상)
-score_counts_5 <- table(df$score_5)
-barplot(score_counts_5,
-        main = "전략: 첫 번째 주사위 5 이상",
-        xlab = "점수",
-        ylab = "빈도",
-        col = "lightgreen",
-        border = "green")
-```
 
 ```r
 # 전략 3: 첫 번째 주사위 값이 6 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
 df$score_6 <- ifelse(df$dice1 >= 6,
                      10 * df$dice1 + df$dice2,
                      10 * df$dice2 + df$dice1)
-
-
-
-
 
 # 전략 3: 총점 및 평균 점수 계산
 total_score_6 <- sum(df$score_6)
@@ -166,16 +142,56 @@ average_score_6
 ![2025 캡스톤 디자인 14page(과제1 1결과3)](https://github.com/user-attachments/assets/3ef91ea2-7e3e-400b-a8ac-e4f739c5f899)
 
 ```r
-# 전략 3 (6 이상)
-score_counts_6 <- table(df$score_6)
-barplot(score_counts_6,
-        main = "전략: 첫 번째 주사위 6 이상",
-        xlab = "점수",
-        ylab = "빈도",
-        col = "salmon",
-        border = "red")
+all_combinations <- expand.grid(dice1 = 1:6, dice2 = 1:6)
+all_combinations
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과4)](https://github.com/user-attachments/assets/e0736b65-609f-4e5e-a2fc-335c8545e9e1)
 
+```r
+# 전략 1 확률분포: 첫 번째 주사위가 4 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+score_strategy1 <- ifelse(all_combinations$dice1 >= 4,
+                       10 * all_combinations$dice1 + all_combinations$dice2,
+                       10 * all_combinations$dice2 + all_combinations$dice1)
+
+score_strategy1
+```
+![2025 캡스톤 디자인 14page(과제1 1결과5)](https://github.com/user-attachments/assets/43c2b29c-e52f-4349-a651-00200614ad44)
+
+```r
+# 전략 2 확률분포: 첫 번째 주사위가 5 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+score_strategy2 <- ifelse(all_combinations$dice1 >= 5,
+                       10 * all_combinations$dice1 + all_combinations$dice2,
+                       10 * all_combinations$dice2 + all_combinations$dice1)
+score_strategy2
+```
+![2025 캡스톤 디자인 14page(과제1 1결과6)](https://github.com/user-attachments/assets/fb465fc1-cd3f-4d90-9515-de663baa9032)
+
+```r 
+# 전략 3 확률분포: 첫 번째 주사위가 6 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+score_strategy3 <- ifelse(all_combinations$dice1 >= 6,
+                       10 * all_combinations$dice1 + all_combinations$dice2,
+                       10 * all_combinations$dice2 + all_combinations$dice1)
+score_strategy3
+```
+![2025 캡스톤 디자인 14page(과제1 1결과7)](https://github.com/user-attachments/assets/464b1dcb-662a-4054-84c0-26313576a3fc)
+
+
+# 전략 1 확률 분포
+dist_strategy1 <- prop.table(table(score_strategy1))
+barplot(dist_strategy1, main = "Strategy 1 Score Distribution",
+        xlab = "Score", ylab = "Probability", col = "skyblue", border = "blue")
+
+# 전략 2 확률 분포
+dist_strategy2 <- prop.table(table(score_strategy2))
+barplot(dist_strategy2, main = "Strategy 2 Score Distribution",
+        xlab = "Score", ylab = "Probability", col = "lightgreen", border = "darkgreen")
+
+# 전략 3 확률 분포
+dist_strategy3 <- prop.table(table(score_strategy3))
+barplot(dist_strategy3, main = "Strategy 3 Score Distribution",
+        xlab = "Score", ylab = "Probability", col = "salmon", border = "red")
+
+```
 
 # 이론적인 기대 점수 계산
 
