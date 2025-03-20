@@ -142,13 +142,15 @@ average_score_6
 ![2025 캡스톤 디자인 14page(과제1 1결과3)](https://github.com/user-attachments/assets/3ef91ea2-7e3e-400b-a8ac-e4f739c5f899)
 
 ```r
+# 이론적인 기대값과 확률분포 구하기
+# 모든 경우의 수 구하기
 all_combinations <- expand.grid(dice1 = 1:6, dice2 = 1:6)
 all_combinations
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과4)](https://github.com/user-attachments/assets/e0736b65-609f-4e5e-a2fc-335c8545e9e1)
 
 ```r
-# 전략 1 확률분포: 첫 번째 주사위가 4 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+# 전략 1 : 첫 번째 주사위가 4 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
 score_strategy1 <- ifelse(all_combinations$dice1 >= 4,
                        10 * all_combinations$dice1 + all_combinations$dice2,
                        10 * all_combinations$dice2 + all_combinations$dice1)
@@ -158,7 +160,7 @@ score_strategy1
 ![2025 캡스톤 디자인 14page(과제1 1결과5)](https://github.com/user-attachments/assets/43c2b29c-e52f-4349-a651-00200614ad44)
 
 ```r
-# 전략 2 확률분포: 첫 번째 주사위가 5 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+# 전략 2 : 첫 번째 주사위가 5 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
 score_strategy2 <- ifelse(all_combinations$dice1 >= 5,
                        10 * all_combinations$dice1 + all_combinations$dice2,
                        10 * all_combinations$dice2 + all_combinations$dice1)
@@ -167,7 +169,7 @@ score_strategy2
 ![2025 캡스톤 디자인 14page(과제1 1결과6)](https://github.com/user-attachments/assets/fb465fc1-cd3f-4d90-9515-de663baa9032)
 
 ```r 
-# 전략 3 확률분포: 첫 번째 주사위가 6 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
+# 전략 3 : 첫 번째 주사위가 6 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
 score_strategy3 <- ifelse(all_combinations$dice1 >= 6,
                        10 * all_combinations$dice1 + all_combinations$dice2,
                        10 * all_combinations$dice2 + all_combinations$dice1)
