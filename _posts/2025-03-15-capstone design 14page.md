@@ -110,6 +110,7 @@ average_score_4 <- mean(df$score_4)
 total_score_4
 average_score_4
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과)](https://github.com/user-attachments/assets/8de4f0da-70f7-472e-8dc6-0c6823ca8a3e)
 
 ```r
 # 전략 1 (4 이상)
@@ -133,6 +134,7 @@ average_score_5 <- mean(df$score_5)
 total_score_5
 average_score_5
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과2)](https://github.com/user-attachments/assets/e8262c6d-ad3b-426b-88bf-6ffa6abe846e)
 
 ```r
 # 전략 2 (5 이상)
@@ -160,11 +162,10 @@ total_score_6 <- sum(df$score_6)
 average_score_6 <- mean(df$score_6)
 total_score_6
 average_score_6
+```
+![2025 캡스톤 디자인 14page(과제1 1결과3)](https://github.com/user-attachments/assets/3ef91ea2-7e3e-400b-a8ac-e4f739c5f899)
 
-
-
-
-
+```r
 # 전략 3 (6 이상)
 score_counts_6 <- table(df$score_6)
 barplot(score_counts_6,
