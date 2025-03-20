@@ -153,6 +153,8 @@ all_combinations
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과4)](https://github.com/user-attachments/assets/e0736b65-609f-4e5e-a2fc-335c8545e9e1)
 
+---
+
 ```r
 # 전략 1 : 첫 번째 주사위가 4 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
 score_strategy1 <- ifelse(all_combinations$dice1 >= 4,
