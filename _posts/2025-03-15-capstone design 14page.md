@@ -100,7 +100,7 @@ PPDAC 모델은 데이터 분석의 시작부터 끝까지
 
 ```r
 df <- read.csv("two_dice.csv")
-df
+head(df,10)
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과0)](https://github.com/user-attachments/assets/cca21882-bd65-4154-b4f5-9307600082fb)
 
@@ -374,36 +374,31 @@ simulate_game_fixed <- function(d1, d2, d3) {
 
 
 games <- read.csv("three_dice.csv")
-
-# 각 게임의 최종 점수 
-games$score <- mapply(simulate_game_fixed, games$dice1, games$dice2, games$dice3)
-
-sum(games$score)
-mean(games$score)
+head(games,10)
 ```
+![2025 캡스톤 디자인 14page(과제1 2결과0)](https://github.com/user-attachments/assets/64244f53-b046-4d29-b6c2-51f83aea593a)
 
 ---
 
 ```r
-# 그래프
-score_table <- table(games$score)
-barplot(score_table, main = "최적 전략 사용 시 세 자리 수 분포",
-        xlab = "점수", ylab = "빈도",
-        col = "skyblue", border = "blue")
-
-# 모든 216가지 경우에 대한 이론적 기댓값 
-outcomes <- expand.grid(dice1 = 1:6, dice2 = 1:6, dice3 = 1:6) # expand.grid() 함수를 사용하여 d1, d2, d3 각각 1부터 6까지 가능한 모든 조합(총 216가지)을 생성하여 outcomes 데이터프레임에 저장
-all_scores <- mapply(simulate_game_fixed, outcomes$dice1, outcomes$dice2, outcomes$dice3) # mapply() 함수를 사용해 216가지 조합 각각에 대해 simulate_game_fixed() 함수를 실행하고, 결과(최종 세 자리 수)를 all_scores 벡터에 저장
-theoretical_expectation <- mean(all_scores)
-theoretical_expectation
+# 각 게임의 최종 점수 
+games$score <- mapply(simulate_game_fixed, games$dice1, games$dice2, games$dice3)
+sum(games$score)
+mean(games$score)
 ```
+![2025 캡스톤 디자인 14page(과제1 2결과)](https://github.com/user-attachments/assets/616606b9-8216-4910-bdbf-f4b0cb1db976)
 
-![image](https://private-user-images.githubusercontent.com/126757930/423800802-9a1779ef-cfed-40ca-a8fb-9016b51f5973.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIyNzM5NzMsIm5iZiI6MTc0MjI3MzY3MywicGF0aCI6Ii8xMjY3NTc5MzAvNDIzODAwODAyLTlhMTc3OWVmLWNmZWQtNDBjYS1hOGZiLTkwMTZiNTFmNTk3My5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOFQwNDU0MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02YzUwOWM1YTMwOTk4YWI2Nzg0MTE2ZGUxZjQyMjEzNzQyNGE4ZjRkNjQ0MTllZWY2YjEzYjZjZWJjNzA5Zjg3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.iuEHPFVN4xUsAm7TTjdmUrstwZD3kj6_9kdDhBEkHA8)
+---
 
-![image](https://private-user-images.githubusercontent.com/126757930/423811083-1382fef4-a9d7-43f7-a5fc-391c43c64e11.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIyNzYwMzIsIm5iZiI6MTc0MjI3NTczMiwicGF0aCI6Ii8xMjY3NTc5MzAvNDIzODExMDgzLTEzODJmZWY0LWE5ZDctNDNmNy1hNWZjLTM5MWM0M2M2NGUxMS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOFQwNTI4NTJaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05Yzc4MmQ1MzEwYTRhYzU5YjZiZWM4NWYxYTdlNjNhYzExZGMyZDVlNmNlMmQ3NTE4ZTI3MDliMTk0MDk0MjMzJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.H-SlDawTNoC2h9mJSggIZorblEPWciFgCu5a_VTzbXE)
+```r
+# 모든 216가지 경우의 조합 계산 
+outcomes <- expand.grid(dice1 = 1:6, dice2 = 1:6, dice3 = 1:6)
+all_scores <- mapply(simulate_game_fixed, outcomes$dice1, outcomes$dice2, outcomes$dice3)
+all_scores
+```
+![2025 캡스톤 디자인 14page(과제1 2결과1)](https://github.com/user-attachments/assets/d4d14545-49c3-47c1-a383-580b3270f4b5)
 
-![image](https://private-user-images.githubusercontent.com/126757930/423800822-12802d4d-753e-4187-9c8d-20f45127577d.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIyNzM5NzMsIm5iZiI6MTc0MjI3MzY3MywicGF0aCI6Ii8xMjY3NTc5MzAvNDIzODAwODIyLTEyODAyZDRkLTc1M2UtNDE4Ny05YzhkLTIwZjQ1MTI3NTc3ZC5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjUwMzE4JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI1MDMxOFQwNDU0MzNaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT00MDkzNDg2YzNjMzA0YWRkYzIyOTdjZTI1MDk2ZjBiNzMwZGIxOTVkYzUwYTg5ZjZiMWJlZjQ0NGJmMWQxYWU3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCJ9.lVU5JdXq_iB4yrYd0NhpTsBfEf3MzGKDsxmCqcg25-M)
-
+---
 
 
 - **첫 번째 후회:**  
