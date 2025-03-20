@@ -400,7 +400,36 @@ all_scores
 
 ---
 
+```r
+# 이론적 기댓값 계산 (216가지 경우의 평균)
+theoretical_expectation <- mean(all_scores)
+theoretical_expectation
+```
+![2025 캡스톤 디자인 14page(과제1 2결과2)](https://github.com/user-attachments/assets/efb0019d-58bb-4965-8606-6c9400cd69fa)
 
+---
+
+```r
+# 확률 분포 계산
+score_distribution <- table(all_scores)
+score_prob <- prop.table(score_distribution) 
+score_prob
+```
+![2025 캡스톤 디자인 14page(과제1 2결과3)](https://github.com/user-attachments/assets/46fef160-2242-4805-85c7-fe9f25738901)
+
+---
+
+```r
+# 확률 분포 그림
+barplot(score_prob,
+        main = "Final Score Probability Distribution (Theoretical)",
+        xlab = "Score", ylab = "Probability",
+        col = "skyblue", border = "blue",
+        ylim = c(0, max(score_prob) * 1.1))
+```
+![2025 캡스톤 디자인 14page(과제1 2, 그래프)](https://github.com/user-attachments/assets/7ed2985d-d35e-463c-b89b-b5143f98dbda)
+
+---
 - **첫 번째 후회:**  
   만약 첫 번째 주사위가 3이나 4와 같이 애매한 숫자가 나왔는데,  
   너무 소극적으로 이 숫자를 100의 자리에 배치해버린다면,  
