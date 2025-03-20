@@ -187,16 +187,19 @@ score_strategy3
 expectation_strategy1 <- mean(score_strategy1)
 expectation_strategy1
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과8)](https://github.com/user-attachments/assets/4a36cb64-83b2-4b2c-abf9-db327a7aee0d)
 
 ```r
 expectation_strategy2 <- mean(score_strategy2)
 expectation_strategy2
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과9)](https://github.com/user-attachments/assets/9885dc49-9d33-424e-a2fb-e48e37e5671c)
 
 ```r
 expectation_strategy3 <- mean(score_strategy3)
 expectation_strategy3
 ```
+![2025 캡스톤 디자인 14page(과제1 1결과10)](https://github.com/user-attachments/assets/d47fc5ec-4121-4376-ba30-57fec6078606)
 
 ---
 
@@ -223,7 +226,7 @@ barplot(dist_strategy3, main = "Strategy 3 Score Distribution",
 ```
 ---
 
-# 이론적인 기대 점수 계산
+# 이론적인 기대 점수 계산(수식)
 
 이 문서에서는 주사위 두 개를 사용하여 다음과 같은 전략 하에서 최종 두 자리 수의 평균(기댓값)을 계산하는 과정을 설명합니다.
 
