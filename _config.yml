@@ -118,7 +118,7 @@ author:
   bio              : "RYU-TAE-YOUNG"
   location   : "광주광역시 광산구 첨단중앙로"
   location_url: "https://www.google.com/maps/search/?api=1&query=%EA%B4%91%EC%A3%BC%EA%B4%91%EC%97%AD%EC%8B%9C+%EA%B4%91%EC%82%B0%EA%B5%AC+%EC%B2%A8%EB%8B%A8%EC%A4%91%EC%95%99%EB%A1%9C"
-  email            : "tyoung612345@gmail.com"
+  email      : "mailto:tyoung612345@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
