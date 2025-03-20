@@ -100,7 +100,13 @@ PPDAC 모델은 데이터 분석의 시작부터 끝까지
 
 ```r
 df <- read.csv("two_dice.csv")
+df
+```
+![2025 캡스톤 디자인 14page(과제1 1결과0)](https://github.com/user-attachments/assets/cca21882-bd65-4154-b4f5-9307600082fb)
 
+---
+
+```r
 # 전략 1: 첫 번째 주사위 값이 4 이상이면 10의 자리로 사용, 그렇지 않으면 1의 자리로 사용
 df$score_4 <- ifelse(df$dice1 >= 4,
                      10 * df$dice1 + df$dice2,
@@ -374,8 +380,11 @@ games$score <- mapply(simulate_game_fixed, games$dice1, games$dice2, games$dice3
 
 sum(games$score)
 mean(games$score)
+```
 
+---
 
+```r
 # 그래프
 score_table <- table(games$score)
 barplot(score_table, main = "최적 전략 사용 시 세 자리 수 분포",
