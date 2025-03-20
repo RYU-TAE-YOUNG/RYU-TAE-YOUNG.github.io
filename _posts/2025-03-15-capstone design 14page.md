@@ -175,7 +175,7 @@ score_strategy3
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과7)](https://github.com/user-attachments/assets/464b1dcb-662a-4054-84c0-26313576a3fc)
 
-
+```r
 # 전략 1 확률 분포
 dist_strategy1 <- prop.table(table(score_strategy1))
 barplot(dist_strategy1, main = "Strategy 1 Score Distribution",
