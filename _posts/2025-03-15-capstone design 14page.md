@@ -184,18 +184,21 @@ score_strategy3
 ---
 
 ```r
+# 전략 1의 기댓값
 expectation_strategy1 <- mean(score_strategy1)
 expectation_strategy1
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과8)](https://github.com/user-attachments/assets/4a36cb64-83b2-4b2c-abf9-db327a7aee0d)
 
 ```r
+# 전략 2의 기댓값
 expectation_strategy2 <- mean(score_strategy2)
 expectation_strategy2
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과9)](https://github.com/user-attachments/assets/9885dc49-9d33-424e-a2fb-e48e37e5671c)
 
 ```r
+# 전략 3의 기댓값
 expectation_strategy3 <- mean(score_strategy3)
 expectation_strategy3
 ```
@@ -203,27 +206,30 @@ expectation_strategy3
 
 ---
 
-
-
-
-
 ```r
 # 전략 1 확률 분포
 dist_strategy1 <- prop.table(table(score_strategy1))
 barplot(dist_strategy1, main = "Strategy 1 Score Distribution",
         xlab = "Score", ylab = "Probability", col = "skyblue", border = "blue")
+```
+![2025 캡스톤 디자인 14page(과제1 1, 그래프1)](https://github.com/user-attachments/assets/99eb0cd7-fa2c-4047-943a-22ead651246c)
 
+```r
 # 전략 2 확률 분포
 dist_strategy2 <- prop.table(table(score_strategy2))
 barplot(dist_strategy2, main = "Strategy 2 Score Distribution",
         xlab = "Score", ylab = "Probability", col = "lightgreen", border = "darkgreen")
+```
+![2025 캡스톤 디자인 14page(과제1 1, 그래프2)](https://github.com/user-attachments/assets/f9cc8e1c-72f3-44e5-a9d4-1ce6935c3006)
 
+```r
 # 전략 3 확률 분포
 dist_strategy3 <- prop.table(table(score_strategy3))
 barplot(dist_strategy3, main = "Strategy 3 Score Distribution",
         xlab = "Score", ylab = "Probability", col = "salmon", border = "red")
-
 ```
+![2025 캡스톤 디자인 14page(과제1 1, 그래프3)](https://github.com/user-attachments/assets/3e0c8dca-76ac-430f-af47-d84ea396dbd8)
+
 ---
 
 # 이론적인 기대 점수 계산(수식)
