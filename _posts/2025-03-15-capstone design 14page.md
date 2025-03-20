@@ -82,8 +82,8 @@ PPDAC 모델은 데이터 분석의 시작부터 끝까지
 복잡한 데이터 분석 프로젝트에서도 명확한 목표와 체계적인 진행 방식을 유지할 수 있으며,  
 분석 결과를 보다 효과적으로 의사결정에 반영할 수 있습니다.
 
+---
 
--------------------------------------------------------------------------
 # 과제1.1
 # 두 자리 숫자 게임: 최적 전략 분석
 
@@ -95,6 +95,8 @@ PPDAC 모델은 데이터 분석의 시작부터 끝까지
 2. 이후, **두 번째 주사위**를 굴린 눈은 자동으로 남은 자리(10의 자리 또는 1의 자리)에 배치됩니다.
 
 어떤 전략을 사용해야 게임에 이길 가능성이 가장 클까?
+
+---
 
 ```r
 df <- read.csv("two_dice.csv")
@@ -141,7 +143,7 @@ average_score_6
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과3)](https://github.com/user-attachments/assets/3ef91ea2-7e3e-400b-a8ac-e4f739c5f899)
 
------------------------------------------
+---
 
 ```r
 # 이론적인 기대값과 확률분포 구하기
@@ -179,6 +181,8 @@ score_strategy3
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과7)](https://github.com/user-attachments/assets/464b1dcb-662a-4054-84c0-26313576a3fc)
 
+---
+
 ```r
 expectation_strategy1 <- mean(score_strategy1)
 expectation_strategy1
@@ -194,7 +198,7 @@ expectation_strategy3 <- mean(score_strategy3)
 expectation_strategy3
 ```
 
-
+---
 
 
 
@@ -217,6 +221,7 @@ barplot(dist_strategy3, main = "Strategy 3 Score Distribution",
         xlab = "Score", ylab = "Probability", col = "salmon", border = "red")
 
 ```
+---
 
 # 이론적인 기대 점수 계산
 
