@@ -141,6 +141,8 @@ average_score_6
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과3)](https://github.com/user-attachments/assets/3ef91ea2-7e3e-400b-a8ac-e4f739c5f899)
 
+-----------------------------------------
+
 ```r
 # 이론적인 기대값과 확률분포 구하기
 # 모든 경우의 수 구하기
