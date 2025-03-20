@@ -116,7 +116,48 @@ author:
   name             : "Name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "RYU-TAE-YOUNG"
-  location         : "South Korea"
+  location         : "var HOME_PATH = window.HOME_PATH || '.';
+
+// 광산구 첨단중앙로 (예시 좌표)
+var cheomdan = new naver.maps.LatLng(35.1510, 126.8300),
+    map = new naver.maps.Map('map', {
+        center: cheomdan.destinationPoint(0, 500),
+        zoom: 15
+    }),
+    marker = new naver.maps.Marker({
+        map: map,
+        position: cheomdan
+    });
+
+// 정보창 내용 설정: 광산구 첨단중앙로 정보와 이미지, 전화번호, 홈페이지 링크 등
+var contentString = [
+    '<div class="iw_inner">',
+    '   <h3>광산구 첨단중앙로</h3>',
+    '   <p>광주광역시 광산구 첨단중앙로<br />',
+    '       <img src="'+ HOME_PATH +'/img/example/cheomdan.jpg" width="55" height="55" alt="첨단중앙로" class="thumb" /><br />',
+    '       전화번호: 062-000-0000<br />',
+    '       <a href="https://www.gwangju.go.kr" target="_blank">www.gwangju.go.kr</a>',
+    '   </p>',
+    '</div>'
+].join('');
+
+// 정보창 생성
+var infowindow = new naver.maps.InfoWindow({
+    content: contentString
+});
+
+// 마커 클릭 시 정보창 토글
+naver.maps.Event.addListener(marker, "click", function(e) {
+    if (infowindow.getMap()) {
+        infowindow.close();
+    } else {
+        infowindow.open(map, marker);
+    }
+});
+
+// 페이지 로드 시 기본적으로 정보창 열기
+infowindow.open(map, marker);
+"
   email            : "tyoung612345@gmail.com"
   links:
     - label: "Email"
