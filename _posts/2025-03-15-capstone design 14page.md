@@ -157,7 +157,7 @@ score_strategy1 <- ifelse(all_combinations$dice1 >= 4,
 
 score_strategy1
 ```
-![2025 캡스톤 디자인 14page(과제1 1결과5)](https://github.com/user-attachments/assets/43c2b29c-e52f-4349-a651-00200614ad44)
+![2025 캡스톤 디자인 14page(과제1 1결과5)](https://github.com/user-attachments/assets/2b88154c-2c54-4b39-815a-5140ecfd01f5)
 
 ```r
 # 전략 2 : 첫 번째 주사위가 5 이상이면 10의 자리로, 그렇지 않으면 1의 자리로 사용
@@ -176,6 +176,27 @@ score_strategy3 <- ifelse(all_combinations$dice1 >= 6,
 score_strategy3
 ```
 ![2025 캡스톤 디자인 14page(과제1 1결과7)](https://github.com/user-attachments/assets/464b1dcb-662a-4054-84c0-26313576a3fc)
+
+```r
+expectation_strategy1 <- mean(score_strategy1)
+expectation_strategy1
+```
+
+```r
+expectation_strategy2 <- mean(score_strategy2)
+expectation_strategy2
+```
+
+```r
+expectation_strategy3 <- mean(score_strategy3)
+expectation_strategy3
+```
+
+
+
+
+
+
 
 ```r
 # 전략 1 확률 분포
