@@ -21,7 +21,7 @@ title                    : "Site Title"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "RYU-TAE-YOUNG"
-description              : "An amazing website."
+description              : "RYU-TAE-YOUNG website."
 url                      : "https://RYU-TAE-YOUNG.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
@@ -113,11 +113,11 @@ analytics:
 
 # Site Author
 author:
-  name             : "Your Name"
+  name             : "Name"
   avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
-  bio              : "I am an **amazing** person."
-  location         : "Somewhere"
-  email            :
+  bio              : "RYU-TAE-YOUNG"
+  location         : "South Korea"
+  email            : "tyoung612345@gmail.com"
   links:
     - label: "Email"
       icon: "fas fa-fw fa-envelope-square"
