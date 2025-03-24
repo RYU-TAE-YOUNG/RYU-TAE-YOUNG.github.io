@@ -49,16 +49,6 @@
   - `method`: 데이터 전송 방식(GET, POST 등)을 결정합니다.
 - **검증 및 처리:** 클라이언트 및 서버 사이드 검증을 통해 사용자 입력의 정확성을 보장합니다.
 
-<form action="/submit" method="post">
-    <label for="username">이름:</label>
-    <input type="text" id="username" name="username" required>
-    <br>
-    <label for="email">이메일:</label>
-    <input type="email" id="email" name="email" required>
-    <br>
-    <button type="submit">제출</button>
-</form>
-
 
 ### 2.2.4 웹페이지 확장하기
 - **멀티미디어 요소:** 이미지(`<img>`), 오디오(`<audio>`), 비디오(`<video>`) 등 다양한 미디어를 활용하여 풍부한 콘텐츠 제공.
