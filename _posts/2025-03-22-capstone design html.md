@@ -41,22 +41,6 @@
 - **헤더 셀:** `<th>` 태그를 사용하여 열의 제목을 표시합니다.
 - **테이블 캡션:** `<caption>` 태그로 테이블의 제목을 추가할 수 있습니다.
 
-<table>
-    <caption>학생 성적표</caption>
-    <tr>
-        <th>이름</th>
-        <th>점수</th>
-    </tr>
-    <tr>
-        <td>홍길동</td>
-        <td>95</td>
-    </tr>
-    <tr>
-        <td>김철수</td>
-        <td>88</td>
-    </tr>
-</table>
-
 ### 2.2.3 HTML 폼
 - **폼 태그:** `<form>` 태그를 사용하여 사용자 입력을 받는 영역을 만듭니다.
 - **입력 요소:** `<input>` (텍스트, 체크박스, 라디오 등), `<textarea>` (멀티라인 텍스트), `<select>` (드롭다운 메뉴), `<button>` (버튼) 등을 활용합니다.
@@ -64,6 +48,17 @@
   - `action`: 폼 데이터가 전송될 URL을 지정합니다.
   - `method`: 데이터 전송 방식(GET, POST 등)을 결정합니다.
 - **검증 및 처리:** 클라이언트 및 서버 사이드 검증을 통해 사용자 입력의 정확성을 보장합니다.
+
+<form action="/submit" method="post">
+    <label for="username">이름:</label>
+    <input type="text" id="username" name="username" required>
+    <br>
+    <label for="email">이메일:</label>
+    <input type="email" id="email" name="email" required>
+    <br>
+    <button type="submit">제출</button>
+</form>
+
 
 ### 2.2.4 웹페이지 확장하기
 - **멀티미디어 요소:** 이미지(`<img>`), 오디오(`<audio>`), 비디오(`<video>`) 등 다양한 미디어를 활용하여 풍부한 콘텐츠 제공.
