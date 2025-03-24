@@ -93,3 +93,82 @@
 
 HTML과 CSS의 기본 개념을 확실히 익히면, 더 복잡하고 다양한 웹페이지를 제작할 수 있는 탄탄한 기초를 다질 수 있습니다. 앞으로도 실습 예제와 심화 내용을 통해 웹 개발 실력을 한층 더 높여보시길 바랍니다.
 
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>202016222 통계학과 류태영의 웹페이지</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>안녕하세요! 저는 [202016222 통계학과 류태영]입니다.</h1>
+    <p>이것은 저의 첫 번째 HTML 웹페이지입니다.</p>
+    <div class="img-container">
+        <img src="https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/5.JPG" alt="내 사진">
+    </div>
+    
+    <!-- 관심 목록 -->
+    <h2>관심 목록</h2>
+    <ul class="interest-list">
+        <li>경제</li>
+        <li>주식</li>
+        <li>축구</li>
+        <li>정치</li>
+    </ul>
+
+    <!-- 프로필 정보 -->
+    <h2>프로필 정보</h2>
+    <table class="profile-table">
+        <tr>
+            <th>항목</th>
+            <th>내용</th>
+        </tr>
+        <tr>
+            <td>이름</td>
+            <td>류태영</td>
+        </tr>
+        <tr>
+            <td>학번</td>
+            <td>202016222</td>
+        </tr>
+        <tr>
+            <td>학과</td>
+            <td>통계학과</td>
+        </tr>
+        <tr>
+            <td>취미</td>
+            <td>경제, 주식, 축구, 정치</td>
+        </tr>
+    </table>
+
+    <!-- 추가 정보 링크 -->
+    <h2>더 많은 정보</h2>
+    <div class="links">
+        <a href="https://www.mt.co.kr/">머니투데이</a>
+        <a href="https://www.edaily.co.kr/">이데일리</a>
+        <a href="https://www.youtube.com/@SPOTV/">SPOTV</a>
+        <a href="https://www.youtube.com/@MBCNEWS11/">MBC</a>
+    </div>
+
+    <!-- 메시지 입력 폼 -->
+    <h2>메시지 보내기</h2>
+    <form action="https://formspree.io/f/xoveqwqv" method="POST">
+        <fieldset>
+            <legend>문의사항</legend>
+            
+            <label for="name">이름:</label>
+            <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+
+            <label for="email">이메일:</label>
+            <input type="email" id="email" name="email" placeholder="이메일을 입력하세요">
+
+            <label for="message">메시지:</label>
+            <textarea id="message" name="message" rows="5" placeholder="문의사항을 입력하세요"></textarea>
+
+            <!-- 추가 도전 과제: 버튼에 border-radius와 hover 효과 적용 -->
+            <button type="submit">전송</button>
+        </fieldset>
+    </form>
+</body>
+</html>
