@@ -172,3 +172,82 @@ HTML과 CSS의 기본 개념을 확실히 익히면, 더 복잡하고 다양한 
 </body>
 </html>
 
+
+
+
+---
+title: "my_dashboard"
+author: "202016222 통계학과 류태영"
+date: "`r Sys.Date()`"
+output:
+  flexdashboard::flex_dashboard:
+    orientation: columns
+    vertical_layout: fill
+  pdf_document:
+    latex_engine: xelatex
+    toc: true
+    toc_depth: 2
+    number_sections: true
+    fig_width: 3
+    fig_height: 2
+    fig_caption: true
+    df_print: kable
+    highlight: tango
+  word_document: default
+mainfont: NanumGothic
+runtime: shiny
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, message=FALSE, warning=FALSE,
+                      comment="", digits = 3, tidy = FALSE, prompt = FALSE, fig.align = 'center')
+```
+
+# 나의 분석 보고서
+
+## 자기소개
+안녕하세요. 저는 [202016222 통계학과 류태영]입니다.  
+이것은 저의 첫 번째 HTML 웹페이지에서 작성한 자기소개 내용입니다.  
+저는 경제, 주식, 축구, 정치에 관심이 많으며, 통계학과에서 공부하고 있습니다.
+
+## 사용 중인 R 패키지 목록
+- dplyr
+- ggplot2
+- tidyr
+- readr
+- (필요한 다른 패키지가 있다면 여기에 추가하세요)
+
+## iris 데이터셋 요약
+```{r}
+summary(iris)
+plot(iris)
+
+library(shiny)
+library(tidyverse)
+library(DT)
+library(plotly)
+library(ggplot2)
+
+sliderInput("obs", "표시할 관측값 수:", min = 1, max = 100, value = 10)
+
+selectInput("species", "Species 선택:", 
+            choices = unique(iris$Species), 
+            selected = unique(iris$Species), 
+            multiple = TRUE)
+
+# 선택된 종에 따라 데이터 필터링
+filtered_iris <- reactive({
+  iris %>% filter(Species %in% input$species)
+})
+
+# 기본 ggplot2 산점도 생성
+p <- ggplot(filtered_iris(), aes(x = Sepal.Length, y = Petal.Length, color = Species)) +
+  geom_point(size = 3, alpha = 0.8) +
+  labs(title = "Iris 데이터 산점도", x = "Sepal Length", y = "Petal Length") +
+  theme_minimal()
+
+# plotly로 인터랙티브 그래프로 변환
+ggplotly(p)
+
+DT::datatable(filtered_iris())
