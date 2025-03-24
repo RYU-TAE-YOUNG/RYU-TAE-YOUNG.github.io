@@ -10,20 +10,6 @@
 - **정의:** HTML은 HyperText Markup Language의 약자로, 웹페이지의 구조와 내용을 작성하는 마크업 언어입니다.
 - **역할:** 웹 브라우저가 HTML 문서를 해석해 사용자에게 내용을 시각적으로 표현할 수 있도록 돕습니다.
 
-**예시:**
-```html
-<!DOCTYPE html>
-<html lang="ko">
-<head>
-    <meta charset="UTF-8">
-    <title>예시 문서</title>
-</head>
-<body>
-    <h1>안녕하세요!</h1>
-    <p>HTML 기본 구조 예시입니다.</p>
-</body>
-</html>
-
 ### 2.1.2 HTML 문서 구조
 - **DOCTYPE 선언:** 문서가 HTML5 표준을 따름을 알리기 위해 `<!DOCTYPE html>`로 시작합니다.
 - **HTML 태그:** `<html>` 태그로 전체 문서를 감싸며, 시작과 종료를 명시합니다.
