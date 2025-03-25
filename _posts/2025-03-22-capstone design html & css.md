@@ -101,8 +101,7 @@ HTML과 CSS의 기본 개념을 확실히 익히면, 더 복잡하고 다양한 
     <link rel="stylesheet" type="text/css" href="styles.css">
 </head>
 <body>
-    <h1>안녕하세요! 저는 [202016222 통계학과 류태영]입니다.</h1>
-    <p>이것은 저의 첫 번째 HTML 웹페이지입니다.</p>
+    <h1>202016222 통계학과 류태영의 웹페이지</h1>
     <div class="img-container">
         <img src="https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/5.JPG" alt="내 사진" style="width:300px; height:auto;">
     </div>
