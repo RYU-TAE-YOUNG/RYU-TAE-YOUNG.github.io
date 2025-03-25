@@ -1,22 +1,10 @@
 ---
-title: "Final Analysis Report"
+layout: post
+title: "Final Analysis Report: Iris 데이터셋 분석"
 author: "202016222 통계학과 류태영"
-date: "`r Sys.Date()`"
-params:
-  dataset: "iris"
-output:
-  html_document:
-    toc: true
-    df_print: paged
-  word_document: default
-  pdf_document:
-    toc: true
-    number_sections: true
-    latex_engine: xelatex
-  flexdashboard::flex_dashboard:
-    orientation: columns
-    vertical_layout: fill
-mainfont: "NanumGothic"
+date: "2025-03-25"
+categories: [Data Analysis, R]
+tags: [iris, 분석, 회귀, 상관관계, flexdashboard]
 ---
 
 
