@@ -2,7 +2,7 @@
 layout: post
 title: "Final Analysis Report"
 author: "202016222 통계학과 류태영"
-date: "2025-03-25"  # 실제 날짜로 수정 가능
+date: "2025-03-26"  # 실제 날짜로 수정 가능
 categories: [Data Analysis, R]
 tags: [iris, 분석, 회귀, 상관관계, flexdashboard]
 ---
