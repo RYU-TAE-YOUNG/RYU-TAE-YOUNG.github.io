@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Final Analysis Report: Iris 데이터셋 분석</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    /* 기본 폰트 및 전체 스타일 */
+    body {
+      font-family: 'Nanum Gothic', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background-color: #fdfdfd;
+      margin: 0;
+      padding: 20px;
+    }
+    h1, h2, h3 {
+      font-weight: 700;
+      color: #2c3e50;
+      margin-top: 1.2em;
+      margin-bottom: 0.5em;
+    }
+    h1 {
+      font-size: 2.5em;
+      text-align: center;
+    }
+    h2 {
+      font-size: 2em;
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 0.3em;
+    }
+    h3 {
+      font-size: 1.5em;
+    }
+    p {
+      margin: 1em 0;
+      font-size: 1.1em;
+    }
+    ul {
+      margin: 1em 0 1em 20px;
+      padding: 0;
+      list-style-type: disc;
+    }
+    code {
+      background-color: #ecf0f1;
+      padding: 2px 4px;
+      border-radius: 3px;
+      font-family: 'Courier New', monospace;
+    }
+    pre {
+      background-color: #ecf0f1;
+      padding: 10px;
+      border-radius: 5px;
+      overflow-x: auto;
+    }
+    
+    /* 설명 영역 스타일 */
+    .report-intro {
+      margin: 20px auto;
+      max-width: 800px;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: #f9f9f9;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    .report-intro hr {
+      border: none;
+      border-top: 1px solid #ccc;
+      margin: 20px 0;
+    }
+    
+    /* 이미지 및 테이블 스타일 */
+    .img-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    .img-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #2c3e50;
+      color: #fff;
+    }
+    a {
+      color: #2980b9;
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 설명 영역 -->
+  <div class="report-intro">
+    <h1>웹 개발 가이드: HTML &amp; CSS 기초</h1>
+    <p>
+      이번 포스트에서는 HTML과 CSS의 기본 개념을 이해하고, 웹페이지를 확장하는 방법에 대해 알아봅니다.
+      각 섹션별로 자세한 설명과 함께 예시 코드도 제공하니, 직접 실습해 보시기 바랍니다.
+    </p>
+
+    <hr>
+
+    <h2>2.1 HTML 기본개념</h2>
+    <h3>HTML 소개</h3>
+    <ul>
+      <li><strong>정의:</strong> HTML은 HyperText Markup Language의 약자로, 웹페이지의 구조와 내용을 작성하는 마크업 언어입니다.</li>
+      <li><strong>역할:</strong> 웹 브라우저가 HTML 문서를 해석해 사용자에게 내용을 시각적으로 표현할 수 있도록 돕습니다.</li>
+    </ul>
+    <h3>HTML 문서 구조</h3>
+    <ul>
+      <li><strong>DOCTYPE 선언:</strong> 문서가 HTML5 표준을 따름을 알리기 위해 <code>&lt;!DOCTYPE html&gt;</code>로 시작합니다.</li>
+      <li><strong>HTML 태그:</strong> <code>&lt;html&gt;</code> 태그로 전체 문서를 감싸며, 시작과 종료를 명시합니다.</li>
+      <li><strong>head 섹션:</strong> <code>&lt;head&gt;</code> 태그 안에는 문서의 메타데이터(문서 제목, 문자 인코딩, 외부 파일 링크 등)가 포함됩니다.</li>
+      <li><strong>body 섹션:</strong> <code>&lt;body&gt;</code> 태그 안에는 실제 화면에 표시될 내용(텍스트, 이미지, 링크 등)이 위치합니다.</li>
+    </ul>
+    <h3>주요 HTML 태그</h3>
+    <ul>
+      <li><strong>제목 태그:</strong> <code>&lt;h1&gt;</code> ~ <code>&lt;h6&gt;</code> (문서의 계층적 제목 구성)</li>
+      <li><strong>문단 태그:</strong> <code>&lt;p&gt;</code> (문단 구분)</li>
+      <li><strong>링크 태그:</strong> <code>&lt;a&gt;</code> (다른 페이지 또는 외부 사이트와 연결)</li>
+      <li><strong>이미지 태그:</strong> <code>&lt;img&gt;</code> (이미지 삽입)</li>
+      <li><strong>리스트 태그:</strong> <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code> (순서 있는/없는 목록 구성)</li>
+    </ul>
+    <h3>시맨틱 태그</h3>
+    <ul>
+      <li><strong>의미 부여:</strong> <code>&lt;header&gt;</code>, <code>&lt;nav&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;footer&gt;</code>와 같은 태그를 사용해 문서의 각 부분에 의미를 부여합니다.</li>
+      <li><strong>이점:</strong> 검색 엔진 최적화(SEO)와 접근성을 개선하는 데 도움을 줍니다.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2.2 HTML 목록, 테이블, 폼 &amp; 웹페이지 확장하기</h2>
+    <h3>HTML 목록</h3>
+    <ul>
+      <li><strong>순서 있는 목록:</strong> <code>&lt;ol&gt;</code> 태그로 숫자나 알파벳 순서의 목록을 생성합니다.</li>
+      <li><strong>순서 없는 목록:</strong> <code>&lt;ul&gt;</code> 태그로 불릿 포인트 목록을 생성합니다.</li>
+      <li><strong>목록 항목:</strong> <code>&lt;li&gt;</code> 태그를 사용해 각 항목을 나열합니다.</li>
+    </ul>
+    <h3>HTML 테이블</h3>
+    <ul>
+      <li><strong>기본 구조:</strong> <code>&lt;table&gt;</code> 태그로 시작하며, <code>&lt;tr&gt;</code> 태그로 행(row)을, <code>&lt;td&gt;</code> 태그로 데이터 셀을 구성합니다.</li>
+      <li><strong>헤더 셀:</strong> <code>&lt;th&gt;</code> 태그를 사용하여 열의 제목을 표시합니다.</li>
+      <li><strong>테이블 캡션:</strong> <code>&lt;caption&gt;</code> 태그로 테이블의 제목을 추가할 수 있습니다.</li>
+    </ul>
+    <h3>HTML 폼</h3>
+    <ul>
+      <li><strong>폼 태그:</strong> <code>&lt;form&gt;</code> 태그를 사용하여 사용자 입력을 받는 영역을 만듭니다.</li>
+      <li><strong>입력 요소:</strong> <code>&lt;input&gt;</code> (텍스트, 체크박스, 라디오 등), <code>&lt;textarea&gt;</code> (멀티라인 텍스트), <code>&lt;select&gt;</code> (드롭다운 메뉴), <code>&lt;button&gt;</code> (버튼) 등을 활용합니다.</li>
+      <li><strong>폼 속성:</strong>
+        <ul>
+          <li><code>action</code>: 폼 데이터가 전송될 URL을 지정합니다.</li>
+          <li><code>method</code>: 데이터 전송 방식(GET, POST 등)을 결정합니다.</li>
+        </ul>
+      </li>
+      <li><strong>검증 및 처리:</strong> 클라이언트 및 서버 사이드 검증을 통해 사용자 입력의 정확성을 보장합니다.</li>
+    </ul>
+    <h3>웹페이지 확장하기</h3>
+    <ul>
+      <li><strong>멀티미디어 요소:</strong> 이미지(<code>&lt;img&gt;</code>), 오디오(<code>&lt;audio&gt;</code>), 비디오(<code>&lt;video&gt;</code>) 등 다양한 미디어를 활용하여 풍부한 콘텐츠 제공.</li>
+      <li><strong>링크 및 내비게이션:</strong> <code>&lt;a&gt;</code> 태그를 사용해 외부 페이지 및 사이트로의 이동을 구현합니다.</li>
+      <li><strong>외부 콘텐츠 임베딩:</strong> 유튜브 동영상, 지도 등 외부 서비스를 페이지 내에 포함시켜 사용자 경험을 향상합니다.</li>
+    </ul>
+
+    <hr>
+
+    <h2>2.3 CSS 기본 개념 &amp; 웹페이지 스타일링</h2>
+    <h3>CSS 소개</h3>
+    <ul>
+      <li><strong>정의:</strong> CSS는 HTML 요소의 시각적 스타일(색상, 레이아웃, 폰트 등)을 지정하는 스타일 시트 언어입니다.</li>
+      <li><strong>목적:</strong> 웹페이지 디자인의 일관성과 미적 감각을 향상시키며, 콘텐츠와 스타일을 분리하여 관리합니다.</li>
+    </ul>
+    <h3>CSS 선택자</h3>
+    <ul>
+      <li><strong>태그 선택자:</strong> 예) <code>p { }</code>, <code>div { }</code></li>
+      <li><strong>클래스 선택자:</strong> 예) <code>.classname { }</code> – 여러 요소에 공통 스타일 적용</li>
+      <li><strong>아이디 선택자:</strong> 예) <code>#idname { }</code> – 특정 요소에만 스타일 적용</li>
+      <li><strong>속성 선택자:</strong> 예) <code>[type="text"] { }</code> – 특정 속성을 가진 요소 선택</li>
+      <li><strong>복합 선택자:</strong> 자손, 자식, 형제 선택자를 활용해 보다 구체적인 요소 지정</li>
+    </ul>
+    <h3>CSS 속성 및 박스 모델</h3>
+    <ul>
+      <li><strong>텍스트 스타일:</strong> <code>color</code>, <code>font-size</code>, <code>font-family</code>, <code>text-align</code> 등을 사용해 텍스트를 꾸밉니다.</li>
+      <li><strong>박스 모델:</strong>
+        <ul>
+          <li><strong>margin:</strong> 요소 외부 여백</li>
+          <li><strong>border:</strong> 요소 테두리</li>
+          <li><strong>padding:</strong> 요소 내부 여백</li>
+          <li><strong>width/height:</strong> 요소의 너비와 높이 설정</li>
+        </ul>
+      </li>
+      <li><strong>배경 스타일:</strong> <code>background-color</code>, <code>background-image</code>를 사용해 요소의 배경을 설정합니다.</li>
+    </ul>
+    <h3>CSS 적용 방법</h3>
+    <ul>
+      <li><strong>내부 스타일시트:</strong> HTML <code>&lt;head&gt;</code> 내 <code>&lt;style&gt;</code> 태그로 직접 작성</li>
+      <li><strong>외부 스타일시트:</strong> 별도의 <code>.css</code> 파일을 만들어 <code>&lt;link&gt;</code> 태그로 연결</li>
+      <li><strong>인라인 스타일:</strong> HTML 요소 내 <code>style</code> 속성을 사용해 직접 스타일 적용</li>
+    </ul>
+    <h3>반응형 웹 디자인</h3>
+    <ul>
+      <li><strong>미디어 쿼리:</strong> 화면 크기나 디바이스 특성에 따라 다른 스타일을 적용</li>
+      <li><strong>유동적 레이아웃:</strong> <code>width: 100%</code>, <code>max-width</code> 등을 사용하여 다양한 화면 크기에 맞게 조정</li>
+      <li><strong>플렉스 박스 및 그리드:</strong> CSS Flexbox와 Grid를 사용해 복잡한 레이아웃 구성</li>
+    </ul>
+
+    <hr>
+
+    <p>
+      HTML과 CSS의 기본 개념을 확실히 익히면, 더 복잡하고 다양한 웹페이지를 제작할 수 있는 탄탄한 기초를 다질 수 있습니다. 
+      앞으로도 실습 예제와 심화 내용을 통해 웹 개발 실력을 한층 더 높여보시길 바랍니다.
+    </p>
+  </div>
+
+  <!-- 개인 웹페이지 내용 -->
+  <hr>
+  
+  <h1>202016222 통계학과 류태영의 웹페이지</h1>
+  <div class="img-container">
+    <img src="https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/5.JPG" alt="내 사진" style="width:300px; height:auto;">
+  </div>
+  
+  <h2>관심 목록</h2>
+  <ul class="interest-list">
+    <li>경제</li>
+    <li>주식</li>
+    <li>축구</li>
+    <li>정치</li>
+  </ul>
+
+  <h2>프로필 정보</h2>
+  <table class="profile-table">
+    <tr>
+      <th>항목</th>
+      <th>내용</th>
+    </tr>
+    <tr>
+      <td>이름</td>
+      <td>류태영</td>
+    </tr>
+    <tr>
+      <td>학번</td>
+      <td>202016222</td>
+    </tr>
+    <tr>
+      <td>학과</td>
+      <td>통계학과</td>
+    </tr>
+    <tr>
+      <td>취미</td>
+      <td>경제, 주식, 축구, 정치</td>
+    </tr>
+  </table>
+
+  <h2>더 많은 정보</h2>
+  <div class="links">
+    <a href="https://www.mt.co.kr/">머니투데이</a>
+    <a href="https://www.edaily.co.kr/">이데일리</a>
+    <a href="https://www.youtube.com/@SPOTV/">SPOTV</a>
+    <a href="https://www.youtube.com/@MBCNEWS11/">MBC</a>
+  </div>
+
+  <h2>메시지 보내기</h2>
+  <form action="https://formspree.io/f/xoveqwqv" method="POST">
+    <fieldset>
+      <legend>문의사항</legend>
+      
+      <label for="name">이름:</label>
+      <input type="text" id="name" name="name" placeholder="이름을 입력하세요">
+  
+      <label for="email">이메일:</label>
+      <input type="email" id="email" name="email" placeholder="이메일을 입력하세요">
+  
+      <label for="message">메시지:</label>
+      <textarea id="message" name="message" rows="5" placeholder="문의사항을 입력하세요"></textarea>
+  
+      <button type="submit">전송</button>
+    </fieldset>
+  </form>
+  
+</body>
+</html>
+
