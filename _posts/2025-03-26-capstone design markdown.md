@@ -7,4 +7,4 @@ categories: [Data Analysis, R]
 tags: [iris, 분석, 회귀, 상관관계]
 ---
 
-<meta http-equiv="refresh" content="0; url=_posts/final_report.html" />
+<meta http-equiv="refresh" content="0; url=https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/51.html" />
