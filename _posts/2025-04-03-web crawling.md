@@ -7,6 +7,5 @@ categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
 
-<script type="text/javascript">
-  window.location.href = "https://github.com/RYU-TAE-YOUNG/RYU-TAE-YOUNG.github.io/blob/master/_posts/web-crawling.html";
-</script>
+<meta http-equiv="refresh" content="0; url=https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/51.html" />
+
