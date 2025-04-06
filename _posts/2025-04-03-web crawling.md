@@ -7,5 +7,4 @@ categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
 
-<meta http-equiv="refresh" content="0; url=/_posts/web-crawling.html" />
-
+<meta http-equiv="refresh" content="0; url=./web-crawling.html" />
