@@ -7,4 +7,4 @@ categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
 
-<meta http-equiv="refresh" content="0; url=https://ryu-tae-young.github.io/web-crawling.html" />
+<meta http-equiv="refresh" content="0; url=https://github.com/RYU-TAE-YOUNG/RYU-TAE-YOUNG.github.io/blob/master/web-crawling.html" />
