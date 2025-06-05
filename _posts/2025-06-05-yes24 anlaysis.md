@@ -7,5 +7,5 @@ categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
 
-<meta http-equiv="refresh" content="0; url=https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/65.html"/>
+<meta http-equiv="refresh" content="0; url=https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/67.html"/>
 
