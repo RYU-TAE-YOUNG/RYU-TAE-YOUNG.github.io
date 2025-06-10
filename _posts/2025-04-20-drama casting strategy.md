@@ -7,5 +7,8 @@ categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
 
-<meta http-equiv="refresh" content="0; url=https://enook.jbnu.ac.kr/files/329/tyoung612345@gmail.com/59.html"/>
+<meta http-equiv="refresh" content="0; url=/drama_casting_strategy.html"/>
 
+📺 드라마 캐스팅 전략 분석 결과는 아래 링크를 통해 확인하실 수 있습니다.
+
+👉 [drama_casting_strategy.html 바로가기](/drama_casting_strategy.html)
