@@ -2,7 +2,7 @@
 layout: post
 title: "AI analysis by yes24"
 author: "202016222 통계학과 류태영"
-date: 2025-12-11
+date: 2025-12-10
 categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
