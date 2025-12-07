@@ -1,13 +1,15 @@
 ---
 layout: post
-title: "AI analysis by yes24"
+title: "LEGO anlaysis"
 author: "202016222 통계학과 류태영"
-date: 2025-12-10
-categories: [Web Crawling,Rvest,Rselenium]
-tags: [Web Crawling,Rvest,Rselenium]
-redirect_to: "/독고다이_YES24_20251210.html"
+date: 2025-11-24
+categories: [Web Crawling,Rvest,Rselenium,DRIP]
+tags: [Web Crawling,Rvest,Rselenium,DRIP]
 ---
+
+<meta http-equiv="refresh" content="0; url=/독고다이_LEGO_20251124.html"/>
 
 해당 분석 결과는 아래 링크를 통해 직접 보실 수 있습니다.
 
-👉 [AI analysis by yes24 분석 결과 보기](/독고다이_YES24_20251210.html)
+👉 [LEGO anlaysis by DRIP 분석 결과 보기](/독고다이_LEGO_20251124.html)
+
