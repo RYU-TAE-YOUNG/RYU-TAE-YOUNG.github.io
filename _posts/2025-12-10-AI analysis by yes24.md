@@ -8,9 +8,6 @@ tags: [Web Crawling,Rvest,Rselenium]
 redirect_to: "/독고다이_YES24_20251210.html"
 ---
 
-<meta http-equiv="refresh" content="0; url=/독고다이_YES24_20251210.html"/>
-
 해당 분석 결과는 아래 링크를 통해 직접 보실 수 있습니다.
 
 👉 [AI analysis by yes24 분석 결과 보기](/독고다이_YES24_20251210.html)
-
