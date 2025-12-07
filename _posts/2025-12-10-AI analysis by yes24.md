@@ -1,5 +1,5 @@
 ---
-layout: post
+layout: null
 title: "AI analysis by yes24"
 author: "202016222 통계학과 류태영"
 date: 2025-12-10
