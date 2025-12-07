@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "yes24 anlaysis"
+title: "ETF anlaysis by yes24"
 author: "202016222 통계학과 류태영"
 date: 2025-06-05
 categories: [Web Crawling,Rvest,Rselenium]
