@@ -13,4 +13,3 @@ tags: [Web Crawling,Rvest,Rselenium,DRIP]
 
 👉 [AI analysis by yes24 분석 결과 보기](/독고다이_YES24_20251210.html)
 
-
