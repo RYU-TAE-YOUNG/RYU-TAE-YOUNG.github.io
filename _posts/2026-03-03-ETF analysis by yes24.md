@@ -2,7 +2,7 @@
 layout: post
 title: "ETF analysis by yes24"
 author: "202016222 통계학과 류태영"
-date: 2025-06-05
+date: 2026-03-03
 categories: [Web Crawling,Rvest,Rselenium]
 tags: [Web Crawling,Rvest,Rselenium]
 ---
