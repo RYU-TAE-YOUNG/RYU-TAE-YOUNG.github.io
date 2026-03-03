@@ -11,6 +11,6 @@ tags: [Web Crawling,Rvest,Rselenium]
 
 해당 분석 결과는 아래 링크를 통해 직접 보실 수 있습니다.
 
-👉 [yes24 분석 결과 보기](/yes24_anlaysis.html)
+👉 [yes24 분석 결과 보기](/yes24_anlaysis.html) 
 
 
